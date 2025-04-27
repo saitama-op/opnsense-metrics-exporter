@@ -16,7 +16,6 @@ type Config struct {
 	Timeout          int    `mapstructure:"timeout"`
 	RetryCount       int    `mapstructure:"retry_count"`
 	RetryDelay       int    `mapstructure:"retry_delay"`
-	LogFilePath      string `mapstructure:"log_file_path"`
 	IgnoreSSLWarning bool   `mapstructure:"ignore_ssl_warning"`
 
 	// Add more config fields here
