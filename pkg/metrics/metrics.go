@@ -1,4 +1,4 @@
-package github.com/saitama-op/opnsense-metrics-exporter/metrics
+package metrics
 
 import (
     "github.com/prometheus/client_golang/prometheus"
