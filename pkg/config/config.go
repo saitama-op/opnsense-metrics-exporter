@@ -7,16 +7,18 @@ import (
 )
 
 type Config struct {
-	ServerPort     int    `mapstructure:"server_port"`
-	APIUrl         string `mapstructure:"api_url"`
-	APIKey         string `mapstructure:"api_key"`
-	APISecret      string `mapstructure:"api_secret"`
-	PrometheusPort int    `mapstructure:"prometheus_port"`
-	LogLevel       string `mapstructure:"log_level"`
-	Timeout        int    `mapstructure:"timeout"`
-	RetryCount     int    `mapstructure:"retry_count"`
-	RetryDelay     int    `mapstructure:"retry_delay"`
-	LogFilePath    string `mapstructure:"log_file_path"`
+	ServerPort       int    `mapstructure:"server_port"`
+	APIUrl           string `mapstructure:"api_url"`
+	APIKey           string `mapstructure:"api_key"`
+	APISecret        string `mapstructure:"api_secret"`
+	PrometheusPort   int    `mapstructure:"prometheus_port"`
+	LogLevel         string `mapstructure:"log_level"`
+	Timeout          int    `mapstructure:"timeout"`
+	RetryCount       int    `mapstructure:"retry_count"`
+	RetryDelay       int    `mapstructure:"retry_delay"`
+	LogFilePath      string `mapstructure:"log_file_path"`
+	IgnoreSSLWarning bool   `mapstructure:"ignore_ssl_warning"`
+
 	// Add more config fields here
 }
 
