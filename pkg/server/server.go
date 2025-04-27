@@ -3,16 +3,18 @@ package server
 import (
 	"log"
 	"net/http"
+	"strconv"
 
 	"github.com/prometheus/client_golang/prometheus/promhttp"
 	"github.com/saitama-op/opnsense-metrics-exporter/pkg/api"
+	"github.com/saitama-op/opnsense-metrics-exporter/pkg/config"
 	"github.com/saitama-op/opnsense-metrics-exporter/pkg/metrics"
 )
 
 func metricsHandler(w http.ResponseWriter, r *http.Request) {
-	apiUrl := "https://your-opnsense-url/api/v1/status"
-	apiKey := "your-api-key"
-	apiSecret := "your-api-secret"
+	apiUrl := config.Cfg.APIUrl
+	apiKey := config.Cfg.APIKey
+	apiSecret := config.Cfg.APISecret
 	data, err := api.FetchOPNSenseData(apiUrl, apiKey, apiSecret)
 	if err != nil {
 		log.Println("Error fetching OPNsense data:", err)
@@ -34,5 +36,5 @@ func metricsHandler(w http.ResponseWriter, r *http.Request) {
 func Start() {
 	http.HandleFunc("/metrics", metricsHandler)
 	log.Println("Exporter running on port 8080")
-	log.Fatal(http.ListenAndServe(":8080", nil))
+	log.Fatal(http.ListenAndServe(":"+strconv.Itoa(config.Cfg.ServerPort), nil))
 }
