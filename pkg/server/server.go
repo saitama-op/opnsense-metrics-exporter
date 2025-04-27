@@ -1,11 +1,10 @@
 package server
 
 import (
-    "fmt"
     "log"
     "net/http"
-    "opnsense-metrics-exporter/pkg/api"
-    "opnsense-metrics-exporter/pkg/metrics"
+    "github.com/saitama-op/opnsense-metrics-exporter/pkg/api"
+    "github.com/saitama-op/opnsense-metrics-exporter/pkg/metrics"
     "github.com/prometheus/client_golang/prometheus/promhttp"
 )
 

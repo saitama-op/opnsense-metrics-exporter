@@ -2,7 +2,7 @@ package main
 
 import (
     "log"
-    "opnsense-metrics-exporter/pkg/server"
+    "github.com/saitama-op/opnsense-metrics-exporter/pkg/server"
 )
 
 func main() {
