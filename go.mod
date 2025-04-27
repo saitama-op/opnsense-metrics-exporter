@@ -1,4 +1,4 @@
-module opnsense_metrics_exporter
+module github.com/saitama-op/opnsense_metrics_exporter
 
 go 1.20
 
