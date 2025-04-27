@@ -1,4 +1,4 @@
-package github.com/saitama-op/opnsense-metrics/exporter/api
+package api
 
 import (
     "encoding/json"
