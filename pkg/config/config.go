@@ -23,7 +23,6 @@ type Config struct {
 var Cfg Config
 
 func LoadConfig(path string) {
-	var Cfg Config
 	viper.SetConfigName("config") // config file name without extension
 	viper.SetConfigType("yaml")   // or "json", "toml", etc
 	viper.AddConfigPath(path)     // look for config in the given path

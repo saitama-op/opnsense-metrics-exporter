@@ -35,6 +35,6 @@ func metricsHandler(w http.ResponseWriter, r *http.Request) {
 
 func Start() {
 	http.HandleFunc("/metrics", metricsHandler)
-	log.Println("Exporter running on port 8080")
+	log.Println("Exporter running on port :", config.Cfg.ServerPort)
 	log.Fatal(http.ListenAndServe(":"+strconv.Itoa(config.Cfg.ServerPort), nil))
 }
