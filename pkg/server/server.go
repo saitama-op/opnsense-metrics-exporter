@@ -17,7 +17,7 @@ func metricsHandler(w http.ResponseWriter, r *http.Request) {
 	apiSecret := config.Cfg.APISecret
 	data, err := api.FetchOPNSenseData(apiUrl, apiKey, apiSecret)
 	if err != nil {
-		log.Println("Error fetching OPNsense data:", err)
+		log.Println("Error fetching OPNsense data: ", err)
 		http.Error(w, "Error fetching data", http.StatusInternalServerError)
 		return
 	}
