@@ -1,4 +1,4 @@
-package github.com/saitama-op/opnsense-metrics-exporter/server
+package server
 
 import (
     "fmt"
