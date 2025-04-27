@@ -17,7 +17,7 @@ A custom metrics exporter for OPNsense, written in Go, to collect and expose sys
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/opnsense-metrics-exporter.git
+   git clone https://github.com/saitama-op/opnsense-metrics-exporter.git
    ```
 
 2. Change to the project directory:
